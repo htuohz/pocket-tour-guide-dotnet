@@ -32,8 +32,7 @@ namespace pocket_tour_guide_dotnet
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.WithOrigins("http://localhost:3000",
-                                                          "http://www.contoso.com").AllowAnyHeader();
+                                      builder.WithOrigins("http://localhost:3000").AllowAnyHeader();
                                   });
             });
 

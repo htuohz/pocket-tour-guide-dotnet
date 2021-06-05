@@ -79,21 +79,14 @@ namespace pocket_tour_guide_dotnet.Controllers
                         if(node.Name == "sup")
                         {
                             node.Remove();
-                        }
+                        }                
+                    }
+                    foreach (var node in collection.First().DescendantNodes().ToList())
+                    {
                         if (node.Name == "p")
                         {
-                            //var list = node.ChildNodes.ToList();
-                            //foreach (var child in list)
-                            //{
-                            //    if (child.Name == "sup")
-                            //    {
-                            //        child.Remove();
-                            //    }
-                            //}
                             text = text + node.InnerText;
                         }
-                        
-
                     }
                     //text = document.DocumentNode.SelectNodes("//div[@id='mw-content-text']").First().InnerText;
 
